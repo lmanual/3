@@ -1,0 +1,74 @@
+a
+
+import java.util.Scanner;
+class stclass
+{
+static int num1, num2;
+static int add( int a, int b)
+{
+return a+b;
+}
+static int sub( int a, int b)
+{
+return a-b;
+}
+static int mul( int a, int b)
+{
+return a*b;
+}
+static int div( int a, int b)
+{
+return a/b;
+}
+static int modulus( int a, int b)
+{
+return a%b;
+}
+static int increment( int a)
+{
+return ++a;
+}
+static int decrement( int a)
+{
+return --a;
+}
+public static void main(String args[])
+{
+Scanner input = new Scanner(System.in);
+System.out.println(“Enter two numbers:”);
+num1 = input.nextInt();
+num2 = input.nextInt();
+System.out.println(“\nThe two numbers are: “ + num1 + “,” + num2 +“\nAdditon:
+“ + add(num1, num2) + “\nSubstraction: “ + sub(num1, num2)+“\nMultiplication:
+“ +mul(num1, num2) +
+“\nDivision: “ + div(num1, num2) +“\nModulus: ” + modulus(num1, num2) +“\n
+Increment of 1st num: “+ increment(num1) +”\nDecrement of 2nd num” +
+decrement(num2));
+}
+}
+
+b
+
+import java.io.*;
+class clsarray1
+{
+public static void main(String args[])throws IOException
+{
+BufferedReader br= new BufferedReader(new
+InputStreamReader(System.in));
+int i,n;
+int a[] = new int[100];
+System.out.println("Enter the value of n");
+n=Integer.parseInt(br.readLine());
+System.out.println("Enter the values");
+for(i=0;i<n;i++)
+{
+a[i]=Integer.parseInt(br.readLine());
+}
+System.out.println("The values are");
+for(i=0;i<n;i++)
+{
+System.out.println(a[i]);
+}
+}
+}
