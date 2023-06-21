@@ -1,0 +1,103 @@
+a
+
+class Car{
+public Car()
+{
+System.out.println("Class Car");
+}
+public void vehicleType()
+{
+System.out.println("Vehicle Type: Car");
+}
+}
+class Maruti extends Car{
+public Maruti()
+{
+System.out.println("Class Maruti");
+}
+public void brand()
+{
+System.out.println("Brand: Maruti");
+}
+public void speed()
+{
+System.out.println("Max: 90Kmph");
+}
+}
+public class Maruti800 extends Maruti{
+public Maruti800()
+{
+System.out.println("Maruti Model: 800");
+}
+public void speed()
+{
+System.out.println("Max: 80Kmph");
+}
+public static void main(String args[])
+{
+Maruti800 obj=new Maruti800();
+obj.vehicleType();
+obj.brand();
+obj.speed();
+}
+}
+
+b
+
+import java.io.*;
+class student
+{
+int rno;
+void getno(int n)
+{
+rno = n;
+}
+void putno()
+{
+System.out.println("RegNo:"+rno);
+}
+}
+class Test extends student
+{
+float m1,m2;
+void getmarks(float a,float b)
+{
+m1=a;
+m2=b;
+}
+void putmarks()
+{
+System.out.println("M1 :"+m1);
+System.out.println("M2 :"+m2);
+}
+}
+interface sports
+{
+float sportwt =6.0f;
+void putwt();
+}
+class Results extends Test implements sports
+{
+float tot;
+public void putwt()
+{ System.out.println("Sports wt :"+sportwt);
+}
+void display()
+{
+tot = m1+ m2 + sportwt;
+putno();
+putmarks();
+putwt();
+System.out.println("Total: " +tot);
+}
+}
+class clsmultiple
+{
+public static void main(String args[])
+{
+Results r = new Results();
+r.getno(1001);
+r.getmarks(79f,95f);
+r.display();
+}
+} 
