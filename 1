@@ -1,0 +1,64 @@
+a
+
+import java.util.Scanner;
+Class LinearS
+{
+Public static void main(String args[])
+{
+int counter, num, item, array[];
+Scanner input =new Scanner(System.in);
+System.out.println("Enter number of elements");
+num =input.nextInt();
+array = new int[num];
+System.out.println("Enter "+ num +" integers");
+for(counter =0; counter < n; counter++)
+array[counter]=input.nextInt();
+System.out.println("Enter the search value");
+item=input.nextInt();
+for(counter =0; counter < n; counter++)
+{
+if(array[counter]== item)
+{
+System.out.println(item +" is present at location "+(counter+1));
+break;
+}
+}
+if(counter == num)
+System.out.println(item +" is not present in array.");
+}
+}
+
+b
+
+import java.io.*;
+class SortingNames
+{
+public static void main(String[] args) throws IOException
+{
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+System.out.print("\nEnter The number of Names :");
+int n = Integer.parseInt(br.readLine());
+String names[] = new String[n];
+System.out.println();
+for (int i = 1; i <= n; i++)
+{
+System.out.print("Enter Name " + i + ":");
+names[i-1] = br.readLine();
+}
+System.out.println("\nNames in Ascending Order");
+System.out.println();
+for (int j = 0; j < names.length; j++)
+{
+for (int i = j + 1; i < names.length; i++)
+{
+if (names[i].compareToIgnoreCase(names[j]) < 0)
+{
+String temp = names[j];
+names[j] = names[i];
+names[i] = temp;
+}
+}
+System.out.println(names[j]);
+}
+}
+}
